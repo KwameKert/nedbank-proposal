@@ -1,0 +1,79 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+
+    <div fxFlex="60">
+        
+        <mat-card >
+            <mat-card-header >
+
+                <mat-card-title>Add Property</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+                
+                <mat-horizontal-stepper #stepper>
+                    
+                    <mat-step [stepControl]="marketAnalysis">
+
+                        <form [formGroup]="marketAnalysis" >
+                             <ng-template matStepLabel>Market Analysis</ng-template>
+                         
+                              <div class="form-row">
+
+
+                                        <div class="form-group col-md-6">
+                                            <p class="font-weight-bold mb-0">Geographic Analysis</p>
+                                            <input type="file"  >
+                                         
+                                          </div>
+                                        <div class="form-group col-md-6">
+                                            <p class="font-weight-bold mb-0">Clients Evaluation</p>
+                                            <input type="file"  >
+                                         
+                                          </div>
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="customFile">Feasiblity Study Environmental Impact Assessment </label>
+                                        <input type="file"  >
+                                     
+                                      </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="form-label" for="customFile">Geotechnical Report</label>
+                                        <input type="file"  >
+                                     
+                                      </div>
+                            </div>
+                            </form>
+
+                        </mat-step>
+
+                        <mat-step [stepControl]="marketAnalysis">
+
+                            <form [formGroup]="marketAnalysis">
+                                 <ng-template matStepLabel>Market Analysis</ng-template>
+                                <div fxLayout="row" fxLayoutAlign="space-evenly center">
+                                    
+                                    <div fxFlex="50">
+                                        <input type="text">
+                                    </div>
+
+                                    <div fxFlex="50">
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </mat-step>
+
+
+                    </mat-horizontal-stepper>
+                </mat-card-content>
+            </mat-card>
+
+
+    </div>
+
+</div>

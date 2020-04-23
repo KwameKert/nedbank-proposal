@@ -3,6 +3,8 @@ import { RouterModule, Routes ,PreloadAllModules} from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import {DefaultComponent} from './layouts/default/default.component';
 
+
+
 const routes: Routes= [
 {
   path:'', 
@@ -17,7 +19,13 @@ const routes: Routes= [
   loadChildren: () => import('./modules/student/student.module')
                      .then(m => m.StudentModule)
 },
-//{path: "**", redirectTo: "login"}
+{
+  path: 'property',
+  component: DefaultComponent,
+  loadChildren: () => import('./modules/property/property.module')
+                      .then(m => m.PropertyModule)  
+},    
+{path: "**", redirectTo: "login"}
 ];
 
 @NgModule({
