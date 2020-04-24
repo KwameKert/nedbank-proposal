@@ -31,7 +31,13 @@
 
                     <a class="nav-link" id="v-pills-marketing-tab" data-toggle="pill" href="#v-pills-marketing" role="tab" aria-controls="v-pills-marketing" aria-selected="false" #marketing>Marketing</a>
 
-                    <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
+                    <a class="nav-link" id="v-pills-construction-tab" data-toggle="pill" href="#v-pills-construction" role="tab" aria-controls="v-pills-construction" aria-selected="false" #construction>Construction Documents</a>
+
+
+                    <a class="nav-link" id="v-pills-construction-close-tab" data-toggle="pill" href="#v-pills-construction-close" role="tab" aria-controls="v-pills-construction-close" aria-selected="false" #constructionClose>Construction Close Out</a>
+
+
+                    <a class="nav-link" id="v-pills-loan-tab" data-toggle="pill" href="#v-pills-loan" role="tab" aria-controls="v-pills-loan" aria-selected="false" #loan>Long Term Loan</a>
 
 
 
@@ -80,6 +86,15 @@
                     <div class="tab-pane fade" id="v-pills-marketing" role="tabpanel" aria-labelledby="v-pills-marketing-tab"> 
 
                       <app-marketing [data]="data"  (marketingResponse)="handleMarketingResponse($event)"></app-marketing>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-construction" role="tabpanel" aria-labelledby="v-pills-construction-tab"> 
+
+                      <app-construction [data]="data"  (constructionResponse)="handleConstructionResponse($event)"></app-construction>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-construction-close" role="tabpanel" aria-labelledby="v-pills-construction-close-tab"> 
+                      <app-construction-close [data]="data"  (constructionCloseResponse)="handleConstructionCloseResponse($event)"></app-construction-close>
                     </div>
 
                   </div>

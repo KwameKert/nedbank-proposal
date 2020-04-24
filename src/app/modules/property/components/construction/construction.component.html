@@ -1,0 +1,84 @@
+<div class="row text-center" *ngIf="data">
+    <div class="col-12">
+      <p class="lead ">Constuction Documents for  {{ data.str_name}}</p>
+      <hr>
+    </div>
+   
+  </div>
+  
+
+  <form [formGroup]="constructionForm" (ngSubmit)="saveConstructionForm()" >
+
+
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">Schedule of Invoices</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+
+          <div class="form-group col-md-6">
+              <p class="font-weight-bold mb-0">Project Payment Summary (PPS)</p>
+              <input type="file"
+              id="file">
+            
+            </div>
+       
+</div>
+
+
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">JBCC Payment certificates</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+
+          <div class="form-group col-md-6">
+              <p class="font-weight-bold mb-0">Statements from financier</p>
+              <input type="file"
+              id="file">
+            
+            </div>
+       
+</div>
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">Cost Reports</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+
+          <div class="form-group col-md-6">
+              <p class="font-weight-bold mb-0">Construction Pictures</p>
+              <input type="file"
+              id="file">
+            
+            </div>
+       
+</div>
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">Construction Meeting Minutes</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+       
+</div>
+
+<div class="row">
+    <div class="col-md-6 offset-md-6">
+      <button mat-raised-button class="float-right" color="accent" type="submit"> <mat-icon>backup</mat-icon>	&nbsp;&nbsp;Save Documents</button>
+    </div>
+     
+   </div>
+
+    </form>

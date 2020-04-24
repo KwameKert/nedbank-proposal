@@ -29,4 +29,7 @@ export class MarketingComponent implements OnInit {
 
     this.marketingResponse.emit(true)
   }
+
+
+  
 }
