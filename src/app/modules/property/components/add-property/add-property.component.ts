@@ -18,6 +18,7 @@ export class AddPropertyComponent implements OnInit {
   @ViewChild('planning') planning: ElementRef<any>;
   @ViewChild('approved') approved: ElementRef<any>;
   @ViewChild('finance') finance: ElementRef<any>;
+  @ViewChild('marketing') marketing: ElementRef<any>;
   //@ViewChild('planning') planning: ElementRef<any>;
 
   data: object = {}
@@ -78,6 +79,13 @@ export class AddPropertyComponent implements OnInit {
 
   handleFinanceResponse(event: any){
     this._toastr.success("Finance saved", "Success  😊", {  timeOut:2000});
+
+    let el: any = this.marketing.nativeElement;
+    el.click();
+  }
+
+  handleMarketingResponse(event: any){
+    this._toastr.success("Marketing saved", "Success  😊", {  timeOut:2000});
 
   }
 
