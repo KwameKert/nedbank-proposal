@@ -12,11 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { SiteAcquisitionComponent } from './components/site-acquisition/site-acquisition.component';
 import { PlanningComponent } from './components/planning/planning.component';
 import { ApprovedComponent } from './components/approved/approved.component';
+import { FinanceComponent } from './components/finance/finance.component';
 
 
 
 @NgModule({
-  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent],
   imports: [
     CommonModule,
     MatCardModule,  

@@ -1,3 +1,11 @@
+<div class="row text-center" *ngIf="data">
+  <div class="col-12">
+    <p class="lead ">Site Acquisition Documents for  {{ data.str_name}}</p>
+    <hr>
+  </div>
+ 
+</div>
+
 
  <form [formGroup]="siteAcquisitionForm" (ngSubmit)="saveAcquisitionForm()" >
 <div class="form-row mb-3">

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { FormBuilder, FormGroup} from '@angular/forms';
+
 
 @Component({
   selector: 'app-approved',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApprovedComponent implements OnInit {
 
-  constructor() { }
+  @Input() data : any;
+  @Output() approvedResponse = new EventEmitter<boolean>();
+
+  approvedForm: FormGroup;
+  constructor(private _fb: FormBuilder) { }
 
   ngOnInit(): void {
+
+    this.approvedForm = this._fb.group({
+
+    })
+  }
+
+  saveApproveForm(){
+    
+    this.approvedResponse.emit(true)
+
   }
 
 }

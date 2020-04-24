@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup} from '@angular/forms';
 export class SiteAcquisitionComponent implements OnInit {
 
   @Input() propId: number;
+  @Input() data: any;
   @Output() acquisitionResponse = new EventEmitter<boolean>();
 
   siteAcquisitionForm: FormGroup ;

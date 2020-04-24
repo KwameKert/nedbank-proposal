@@ -16,6 +16,9 @@ export class AddPropertyComponent implements OnInit {
   @ViewChild('market') market: ElementRef<any>;
   @ViewChild('site') site: ElementRef<any>;
   @ViewChild('planning') planning: ElementRef<any>;
+  @ViewChild('approved') approved: ElementRef<any>;
+  @ViewChild('finance') finance: ElementRef<any>;
+  //@ViewChild('planning') planning: ElementRef<any>;
 
   data: object = {}
 
@@ -49,7 +52,9 @@ export class AddPropertyComponent implements OnInit {
   handlePlanningResponse(event: any){
 
     this._toastr.success("Planning saved", "Success  😊", {  timeOut:2000});
-    //this._toastr.success("Success","market analysis SAved");
+    
+    let el: any = this.approved.nativeElement;
+    el.click();
     console.log(event)
   }
 
@@ -61,5 +66,19 @@ export class AddPropertyComponent implements OnInit {
       el.click();
   } 
 
+
+  handleApproveResponse(event: any){
+    console.log('approved')
+    this._toastr.success("Planning saved", "Success  😊", {  timeOut:2000});
+    
+    let el: any = this.finance.nativeElement;
+    el.click();
+  }
+
+
+  handleFinanceResponse(event: any){
+    this._toastr.success("Finance saved", "Success  😊", {  timeOut:2000});
+
+  }
 
 }

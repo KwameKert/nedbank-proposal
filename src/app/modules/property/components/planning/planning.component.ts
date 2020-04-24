@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup} from '@angular/forms';
 export class PlanningComponent implements OnInit {
 
   @Input() propId: number;
+  @Input() data : any;
   @Output() planningResponse = new EventEmitter<boolean>();
 
   planningForm: FormGroup;

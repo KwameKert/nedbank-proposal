@@ -1,3 +1,10 @@
+<div class="row text-center" *ngIf="data">
+  <div class="col-12">
+    <p class="lead ">Planning Documents  for  {{ data.str_name}}</p>
+    <hr>
+  </div>
+ 
+</div>
 
  <form [formGroup]="planningForm" (ngSubmit)="savePlanningForm()" >
   
