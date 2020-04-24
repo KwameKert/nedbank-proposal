@@ -5,17 +5,22 @@ import { PropertyRoutingModule  } from './property-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms/';
 import {MatStepperModule} from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MapComponent } from './map/map.component';
+import { MarketAnalysisComponent } from './components/market-analysis/market-analysis.component';
+
 
 
 @NgModule({
-  declarations: [AddPropertyComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent],
   imports: [
     CommonModule,
     MatCardModule,  
     PropertyRoutingModule,
     FormsModule,
     ReactiveFormsModule,  
-    MatStepperModule
+    MatStepperModule,
+    MatButtonModule
   ]
 })
 export class PropertyModule { }

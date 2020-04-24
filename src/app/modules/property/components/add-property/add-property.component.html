@@ -2,75 +2,141 @@
 
     <div fxFlex="60">
         
-        <mat-card >
+        <mat-card style="height: 500px">
             <mat-card-header >
 
                 <mat-card-title>Add Property</mat-card-title>
             </mat-card-header>
 
             <mat-card-content>
+
+
+         <div class="row">
+                <div class="col-3">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-site-tab" data-toggle="pill" href="#v-pills-site" role="tab" aria-controls="v-pills-site" aria-selected="false">Site Analysis</a>
+
+                    <!-- <a class="nav-link " id="v-pills-makert-tab" data-toggle="pill" href="#v-pills-makerts" role="tab" aria-controls="v-pills-makerts" aria-selected="false">Market Analysis</a> -->
+
+                   
+                    <a class="nav-link" id="v-pills-market-tab" data-toggle="pill" href="#v-pills-market" role="tab" aria-controls="v-pills-market" aria-selected="false">Planning & Engineering</a>
+
+                    <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
+
+                    <a class="nav-link" id="v-pills-planning-tab" data-toggle="pill" href="#v-pills-planning" role="tab" aria-controls="v-pills-planning" aria-selected="false">Planning & Engineering</a>
+
+                    <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
+
+
+                    <a class="nav-link" id="v-pills-planning-tab" data-toggle="pill" href="#v-pills-planning" role="tab" aria-controls="v-pills-planning" aria-selected="false">Planning & Engineering</a>
+
+                    <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
+
+
+
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="tab-content" id="v-pills-tabContent">
+                   
+
+                    <div class="tab-pane fade show active" id="v-pills-site" role="tabpanel" aria-labelledby="v-pills-site-tab"> 
+                      
+                      <div style="height: 200px !important; width: 100% !important">
+
+                        <app-map></app-map>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-market" role="tabpanel" aria-labelledby="v-pills-market-tab">
+                      <div>
+
+                        <app-market-analysis></app-market-analysis>
+                      </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-planning" role="tabpanel" aria-labelledby="v-pills-planning-tab">
+                     pllaning
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-approved" role="tabpanel" aria-labelledby="v-pills-approved-tab">...</div>
+
+                  </div>
+                </div>
+              </div> 
+
+
                 
-                <mat-horizontal-stepper #stepper>
+                <!-- <mat-horizontal-stepper #stepper>
                     
-                    <mat-step [stepControl]="marketAnalysis">
+                    <mat-step >
+                       
+                      <ng-template matStepLabel>Site Selection</ng-template>
+                      <div style="height: 400px; width: 100%">
 
-                        <form [formGroup]="marketAnalysis" >
-                             <ng-template matStepLabel>Market Analysis</ng-template>
-                         
-                              <div class="form-row">
-
-
-                                        <div class="form-group col-md-6">
-                                            <p class="font-weight-bold mb-0">Geographic Analysis</p>
-                                            <input type="file"  >
-                                         
-                                          </div>
-                                        <div class="form-group col-md-6">
-                                            <p class="font-weight-bold mb-0">Clients Evaluation</p>
-                                            <input type="file"  >
-                                         
-                                          </div>
-                                </div>
-
-
-                                <div class="form-row">
-
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="customFile">Feasiblity Study Environmental Impact Assessment </label>
-                                        <input type="file"  >
-                                     
-                                      </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="customFile">Geotechnical Report</label>
-                                        <input type="file"  >
-                                     
-                                      </div>
-                            </div>
-                            </form>
+                        <app-map></app-map>
+                      </div>
+                     <div class="float-right">
+                     
+                      <button mat-raised-button matStepperNext color="primary">Next</button>
+                    </div>
 
                         </mat-step>
 
-                        <mat-step [stepControl]="marketAnalysis">
+                        <mat-step [stepControl]="">
 
-                            <form [formGroup]="marketAnalysis">
-                                 <ng-template matStepLabel>Market Analysis</ng-template>
-                                <div fxLayout="row" fxLayoutAlign="space-evenly center">
-                                    
-                                    <div fxFlex="50">
-                                        <input type="text">
-                                    </div>
-
-                                    <div fxFlex="50">
-
-                                    </div>
-                                </div>
-                            </form>
+                          <ng-template matStepLabel>Market Analysis</ng-template>
+                          <app-market-analysis  (response)="marketResponse($event)"></app-market-analysis>
+                           
 
                         </mat-step>
 
+                        <mat-step [stepControl]="">
+                            <ng-template matStepLabel>Site Acquisition</ng-template>
+                            <div class="form-row mb-3">
+
+
+                                <div class="form-group col-md-6">
+                                    <p class="font-weight-bold mb-0">Land Purchase Agreement</p>
+                                    <input type="file"
+                                    id="file">
+                                  
+                                  </div>
+                                <div class="form-group col-md-6">
+                                    <p class="font-weight-bold mb-0">Sellers Documentation</p>
+                                    <input type="file"  >
+                                 
+                                  </div>
+
+                                  <div class="float-right">
+                           
+                                    <button mat-raised-button matStepperNext color="primary">Next</button>
+                                  </div>
+                        </div>
+
+
+                        </mat-step>
+
+                        <mat-step [stepControl]="">
+                            <ng-template matStepLabel>Site Selection</ng-template>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni architecto aspernatur, mollitia assumenda consequuntur laboriosam, repellat similique tempore quos vitae earum consectetur animi sapiente ipsa? Architecto ex ratione laborum.lorem
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni architecto aspernatur, mollitia assumenda consequuntur laboriosam, repellat similique tempore quos vitae earum consectetur animi sapiente ipsa? Architecto ex ratione laborum.lorem
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus magni architecto aspernatur, mollitia assumenda consequuntur laboriosam, repellat similique tempore quos vitae earum consectetur animi sapiente ipsa? Architecto ex ratione laborum.lorem
+
+                        </mat-step>
+
+                
+
+                 
 
                     </mat-horizontal-stepper>
-                </mat-card-content>
+               -->
+             
+                  </mat-card-content>
             </mat-card>
 
 
