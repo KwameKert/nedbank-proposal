@@ -1,4 +1,13 @@
- <form [formGroup]="marketAnalysisForm" (ngSubmit)="saveMarketForm()" >
+
+<div class="row text-center" *ngIf="data">
+  <div class="col-12">
+    <p class="lead ">Market Analysis for  {{ data.str_name}}</p>
+    <hr>
+  </div>
+ 
+</div>
+
+<form [formGroup]="marketAnalysisForm" (ngSubmit)="saveMarketForm()" >
   
 
      <div class="form-row mb-3">
@@ -43,8 +52,10 @@
          </div>
 </div>
 
-<div class="float-right">
-  
-   <button mat-raised-button color="accent">Save Documents</button>
+<div class="row">
+  <div class="col-md-6 offset-md-6">
+    <button mat-raised-button color="accent" type="submit"> <mat-icon>backup</mat-icon>	&nbsp;&nbsp;Save Documents</button>
+  </div>
+   
  </div>
    </form> 

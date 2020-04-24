@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit , Output, EventEmitter} from '@angular/core';
 import { HttpEvent, HttpEventType  } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -15,6 +15,10 @@ declare const statesData: any;
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+
+
+	@Output() mapResponse  = new EventEmitter<any>();
+
 	private map;
 	public loading: boolean;
 	private initMap(): void {
@@ -124,8 +128,19 @@ export class MapComponent implements OnInit {
 
 			//console.log(layer.feature.properties);
 
-      let landParcel = layer.feature.properties.SL_LAND_PR;
-      console.log(layer.feature.properties);
+	  let landParcel = layer.feature.properties.SL_LAND_PR;
+	  let prop = layer.feature.properties;
+	  
+	  let data = {
+		  str_name: prop.STR_NAME,
+		  alt_name: prop.ALT_NAME,
+		  parcel_no: landParcel
+	  }
+
+	  if(data){
+
+		self.mapResponse.emit(data)
+	  }
 			//console.log(landParcel);
 		//	self.getErfId(landParcel);
 		}
@@ -172,6 +187,12 @@ export class MapComponent implements OnInit {
 		legend.addTo(this.map);
 	}
 
+
+
+	outputResponse(data){
+
+		console.log(data)
+	}
 
 
 

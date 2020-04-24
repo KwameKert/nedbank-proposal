@@ -8,11 +8,15 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
 import { MapComponent } from './map/map.component';
 import { MarketAnalysisComponent } from './components/market-analysis/market-analysis.component';
+import { MatIconModule } from '@angular/material/icon';
+import { SiteAcquisitionComponent } from './components/site-acquisition/site-acquisition.component';
+import { PlanningComponent } from './components/planning/planning.component';
+import { ApprovedComponent } from './components/approved/approved.component';
 
 
 
 @NgModule({
-  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent],
   imports: [
     CommonModule,
     MatCardModule,  
@@ -20,7 +24,8 @@ import { MarketAnalysisComponent } from './components/market-analysis/market-ana
     FormsModule,
     ReactiveFormsModule,  
     MatStepperModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class PropertyModule { }

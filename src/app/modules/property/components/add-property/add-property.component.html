@@ -2,7 +2,7 @@
 
     <div fxFlex="60">
         
-        <mat-card style="height: 500px">
+        <mat-card style="height: 600px">
             <mat-card-header >
 
                 <mat-card-title>Add Property</mat-card-title>
@@ -15,15 +15,16 @@
                 <div class="col-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-site-tab" data-toggle="pill" href="#v-pills-site" role="tab" aria-controls="v-pills-site" aria-selected="false">Site Analysis</a>
-
-                    <!-- <a class="nav-link " id="v-pills-makert-tab" data-toggle="pill" href="#v-pills-makerts" role="tab" aria-controls="v-pills-makerts" aria-selected="false">Market Analysis</a> -->
-
                    
-                    <a class="nav-link" id="v-pills-market-tab" data-toggle="pill" href="#v-pills-market" role="tab" aria-controls="v-pills-market" aria-selected="false">Planning & Engineering</a>
+                    <a class="nav-link" id="v-pills-market-tab" data-toggle="pill" href="#v-pills-market" role="tab" aria-controls="v-pills-market" aria-selected="false" #market>Market Analysis</a>
+
+                    <a class="nav-link" id="v-pills-aquisition-tab" data-toggle="pill" href="#v-pills-aquisition" role="tab" aria-controls="v-pills-aquisition" aria-selected="false" #site>Site Acquisition</a>
+
+                    <a class="nav-link" id="v-pills-planning-tab" data-toggle="pill" href="#v-pills-planning" role="tab" aria-controls="v-pills-planning" aria-selected="false" #planning>Planning & Engineering</a>
 
                     <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
 
-                    <a class="nav-link" id="v-pills-planning-tab" data-toggle="pill" href="#v-pills-planning" role="tab" aria-controls="v-pills-planning" aria-selected="false">Planning & Engineering</a>
+                    
 
                     <a class="nav-link" id="v-pills-approved-tab" data-toggle="pill" href="#v-pills-approved" role="tab" aria-controls="v-pills-approved" aria-selected="false">Approved Documents</a>
 
@@ -44,20 +45,25 @@
                       
                       <div style="height: 200px !important; width: 100% !important">
 
-                        <app-map></app-map>
+                        <app-map  (mapResponse)="handleMapResponse($event)"></app-map>
                       </div>
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-market" role="tabpanel" aria-labelledby="v-pills-market-tab">
                       <div>
 
-                        <app-market-analysis></app-market-analysis>
+                        <app-market-analysis   [propId]="id" [data]="data"  (marketResponse)="handleMarketResponse($event)"></app-market-analysis>
                       </div>
 
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-planning" role="tabpanel" aria-labelledby="v-pills-planning-tab">
-                     pllaning
+                     <app-planning (planningResponse)="handlePlanningResponse($event)"></app-planning>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-aquisition" role="tabpanel" aria-labelledby="v-pills-acquisition-">
+                     <app-site-acquisition  [propId]="id"  (acquisitionResponse)="handleAcquisitionResponse($event)"></app-site-acquisition>
 
                     </div>
 

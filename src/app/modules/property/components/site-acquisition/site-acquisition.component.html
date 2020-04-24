@@ -1,0 +1,28 @@
+
+ <form [formGroup]="siteAcquisitionForm" (ngSubmit)="saveAcquisitionForm()" >
+<div class="form-row mb-3">
+
+
+    <div class="form-group col-md-6">
+        <p class="font-weight-bold mb-0">Land Purchase Agreement</p>
+        <input type="file"
+        id="file">
+      
+      </div>
+    <div class="form-group col-md-6">
+        <p class="font-weight-bold mb-0">Sellers Documentation</p>
+        <input type="file"  >
+     
+      </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-6">
+      <button mat-raised-button color="accent" type="submit"> <mat-icon>backup</mat-icon>	&nbsp;&nbsp;Save Documents</button>
+    </div>
+     
+   </div>
+
+</form>

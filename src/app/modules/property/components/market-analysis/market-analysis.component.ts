@@ -8,7 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MarketAnalysisComponent implements OnInit {
 
   @Input() propId : number ;
-  @Output() emitResponse = new EventEmitter<boolean>();
+  @Input() data: any;
+  @Output() marketResponse = new EventEmitter<boolean>();
+
   formData: any = new FormData();
   fileData: File = null;
   previewUrl:any = null;
@@ -116,8 +118,8 @@ export class MarketAnalysisComponent implements OnInit {
   
 
     saveMarketForm(){
-      this.emitResponse.emit(true);
-      console.log(this.marketAnalysisForm.value)
+      this.marketResponse.emit(true);
+     // console.log(this.marketAnalysisForm.value)
     }
 
 
