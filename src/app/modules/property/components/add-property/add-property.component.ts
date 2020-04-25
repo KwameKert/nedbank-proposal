@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
@@ -27,7 +27,7 @@ export class AddPropertyComponent implements OnInit {
   data: object = {}
 
   id: object = {};
-  constructor(private _fb: FormBuilder, private _toastr: ToastrService) { }
+  constructor(private _fb: FormBuilder, private _toastr: ToastrService, private _router: Router) { }
 
   ngOnInit(): void {
     
@@ -66,6 +66,7 @@ export class AddPropertyComponent implements OnInit {
 
   handleMapResponse(event: any){
       this.data = event;
+      console.log(event)
       let el: any = this.market.nativeElement;
       el.click();
   } 
@@ -112,4 +113,9 @@ export class AddPropertyComponent implements OnInit {
 
   }
 
+
+  listProperty(){
+
+    this._router.navigate(['/property/list'])
+  }
 }
