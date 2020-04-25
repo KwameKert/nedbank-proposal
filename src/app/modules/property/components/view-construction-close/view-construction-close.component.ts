@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ViewConstructionCloseComponent implements OnInit {
 
-  
+   documents: Array<string> = [
+    'Practical-Completion Certificate','Final-Completion Certificate','Statement of Final Account',
+    'Fire Compliance Certificate', 'Electrical Compliance Certificate', 'Occupation Certificate', 'Engineers certificate - structural building elements, components and external civil works'
+  ]; 
+
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
