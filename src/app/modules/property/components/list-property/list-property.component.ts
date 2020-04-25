@@ -20,4 +20,8 @@ export class ListPropertyComponent implements OnInit {
       this._router.navigate(['/property/add']);
   }
 
+
+  viewPropery(){
+    
+  }
 }
