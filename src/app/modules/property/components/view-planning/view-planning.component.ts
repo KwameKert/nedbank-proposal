@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-planning',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewPlanningComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }
 
+
+  viewProperty(){
+
+    this._router.navigate(['/property/view'])
+  }
 }

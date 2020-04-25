@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-approved',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewApprovedComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+
+  viewProperty(){
+
+    this._router.navigate(['/property/view'])
   }
 
 }
