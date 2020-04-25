@@ -17,11 +17,12 @@ import { MarketingComponent } from './components/marketing/marketing.component';
 import { ConstructionComponent } from './components/construction/construction.component';
 import { ConstructionCloseComponent } from './components/construction-close/construction-close.component';
 import { LoanComponent } from './components/loan/loan.component';
+import { ListPropertyComponent } from './components/list-property/list-property.component';
 
 
 
 @NgModule({
-  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent, LoanComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent, LoanComponent, ListPropertyComponent],
   imports: [
     CommonModule,
     MatCardModule,  
