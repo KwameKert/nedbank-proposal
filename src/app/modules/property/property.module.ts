@@ -16,11 +16,12 @@ import { FinanceComponent } from './components/finance/finance.component';
 import { MarketingComponent } from './components/marketing/marketing.component';
 import { ConstructionComponent } from './components/construction/construction.component';
 import { ConstructionCloseComponent } from './components/construction-close/construction-close.component';
+import { LoanComponent } from './components/loan/loan.component';
 
 
 
 @NgModule({
-  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent, LoanComponent],
   imports: [
     CommonModule,
     MatCardModule,  

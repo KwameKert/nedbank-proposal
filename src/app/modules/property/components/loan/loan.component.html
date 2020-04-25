@@ -1,0 +1,51 @@
+<div class="row text-center" *ngIf="data">
+    <div class="col-12">
+      <p class="lead ">Loan Documents for  {{ data.str_name}}</p>
+      <hr>
+    </div>
+   
+  </div>
+  
+
+  <form [formGroup]="loanForm" (ngSubmit)="saveLoanForm()" >
+
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">Transfers</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+
+          <div class="form-group col-md-6">
+              <p class="font-weight-bold mb-0">Conventional loan</p>
+              <input type="file"
+              id="file">
+            
+            </div>
+       
+</div>
+
+
+    <div class="form-row mb-3">
+        <div class="form-group col-md-6">
+            <p class="font-weight-bold mb-0">Settlement Statement</p>
+            <input type="file"
+            id="file">
+          
+          </div>
+       
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-6">
+      <button mat-raised-button class="float-right" color="accent" type="submit"> <mat-icon>backup</mat-icon>	&nbsp;&nbsp;Save Documents</button>
+    </div>
+     
+   </div>
+
+
+   </form>
+
