@@ -1,1 +1,35 @@
-<p>view-loan works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Yena Construction Closeout Documents
+        </mat-card-title>
+    </mat-card-header>
+
+
+    <mat-card-content>
+
+<div class="row">
+    <div class="col-12">
+        <button mat-raised-button class="float-right mb-5" (click)="viewProperty()" color="accent" > <mat-icon>keyboard_backspace</mat-icon>	&nbsp;&nbsp;List Property</button>
+     
+    </div>
+</div>
+       
+        
+        <div class="row text-center" >
+            <div class="col-2" *ngFor="let document of documents">
+              <a href="assets/test.pdf"> 
+                  <img src="assets/images/file.svg" height="70px" alt="">
+                 <p >{{document}} </p>
+            </a> 
+            </div>
+          
+</div>
+
+
+
+      
+     
+        
+    </mat-card-content>
+</mat-card>

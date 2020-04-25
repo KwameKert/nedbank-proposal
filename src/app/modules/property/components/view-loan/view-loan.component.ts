@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class ViewLoanComponent implements OnInit {
 
-
+documents: Array<string> = [
+'Transfers', 'Conventional loan', 'Settlement Statement'
+];
   constructor(private _router: Router) { }
 
   ngOnInit(): void {

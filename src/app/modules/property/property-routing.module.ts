@@ -17,6 +17,9 @@ import { ViewLoanComponent } from './components/view-loan/view-loan.component';
 
 const routes: Routes = [ 
 
+    {
+      path: 'dashboard', component: ListPropertyComponent
+    },
     {path: 'add', component: AddPropertyComponent },
     {path: 'list', component: ListPropertyComponent },
     {path: 'view', component: ViewPropertyComponent },
