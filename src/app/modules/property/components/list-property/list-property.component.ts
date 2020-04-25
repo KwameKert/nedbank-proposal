@@ -22,6 +22,7 @@ export class ListPropertyComponent implements OnInit {
 
 
   viewPropery(){
-    
+
+    this._router.navigate(['/property/view'])
   }
 }
