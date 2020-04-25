@@ -19,14 +19,17 @@ import { ConstructionCloseComponent } from './components/construction-close/cons
 import { LoanComponent } from './components/loan/loan.component';
 import { ListPropertyComponent } from './components/list-property/list-property.component';
 import { ViewPropertyComponent } from './components/view-property/view-property.component';
+import { ViewMarketAnalysisComponent } from './components/view-market-analysis/view-market-analysis.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
-  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent, LoanComponent, ListPropertyComponent, ViewPropertyComponent],
+  declarations: [AddPropertyComponent, MapComponent, MarketAnalysisComponent, SiteAcquisitionComponent, PlanningComponent, ApprovedComponent, FinanceComponent, MarketingComponent, ConstructionComponent, ConstructionCloseComponent, LoanComponent, ListPropertyComponent, ViewPropertyComponent, ViewMarketAnalysisComponent],
   imports: [
     CommonModule,
     MatCardModule,  
+    RouterModule,
     PropertyRoutingModule,
     FormsModule,
     ReactiveFormsModule,  
