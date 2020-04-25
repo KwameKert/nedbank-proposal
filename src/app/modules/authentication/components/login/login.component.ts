@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
     console.log("Logging User in")
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['property/list']);
   }
 
 }
